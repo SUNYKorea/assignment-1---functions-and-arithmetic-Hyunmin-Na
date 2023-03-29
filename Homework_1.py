@@ -6,12 +6,24 @@
 # ---------------------------- Exercise I ---------------------------------------
 # ----------------- Convert Fahrenheit to Celsius -------------------------------
 # TODO: Complete the implementation of fahrenheit2celsius () and what_to_wear(). 
-
+fahrenheit = int(input("What is today's temperature in fahrenheit?"))
 def fahrenheit2celsius(fahrenheit): 
-   ...
+   celsius = (5/9)*(fahrenheit-32)
+   return celsius
+#fruitful
 
 def what_to_wear(celsius):
-   ...
+    if (celsius < -10):
+       print("Puffy jacket")
+    elif (-10 <= celsius <0):
+       print("Scarf")
+    elif (0 <= celsius < 10):
+       print("Sweater")
+    elif (10 <= celsius <20):
+       print("Light jacket")
+    else:
+       print("T-shirt")
+#void
 
 # ---------------------------- Exercise II --------------------------------------
 # ----------------- Area and perimeter of a triangle  ---------------------------
@@ -19,28 +31,33 @@ def what_to_wear(celsius):
 # compute_triangle_perimeter from scratch  
 
 def shoelace_triangle_area(x1, y1, x2, y2, x3, y3):
-    ...
+    area = abs(((x1*y2+x2*y3+x3*y1)-(x1*y3+x2*y1+x3*y2))/2)
+    return area
 
 def euclidean_distance(x1, y1, x2, y2):
-    ...
+    distance = ((x1-x2)**2+(y1-y2)**2)**0.5
+    return distance
 
 def compute_triangle_perimeter(x1, y1, x2, y2, x3, y3):
-    ...
+    perimeter = euclidean_distance(x1,y1,x3,y3)+ euclidean_distance(x1,y1,x2,y2)+ euclidean_distance(x2,y2,x3,y3)
+    return perimeter
 
 
 # ---------------------------- Exercise III -------------------------------------
 # ----------------- Compute the area of a regular polygon -----------------------
 # TODO: Fill the functions deg2rad, apothem  and polygon_area 
-
+import math
 
 def deg2rad(deg):
-    ...
+    radian= (deg * math.pi) / 180
 
 def apothem(number_sides, length_side):
-   ...
+   apothem = length_side/ 2 * math.tan(180/number_sides)
+   return apothem
 
 def polygon_area(number_sides, length_side):
-   ...
+   polygon_area = (number_sides*length_side*apothem(number_sides, length_side))/2
+   return polygon_area
 
 
 # ---------------------------- Test -------------------------------------
