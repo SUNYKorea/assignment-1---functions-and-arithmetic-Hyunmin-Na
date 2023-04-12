@@ -1,6 +1,8 @@
 # Name:
 # SBUID: 
-
+##################### SCORE ######################
+###### Score:  8/10
+#################################################
 # Remove the ellipses (...) when writing your solutions.
 
 # ---------------------------- Exercise I ---------------------------------------
@@ -56,7 +58,7 @@ def apothem(number_sides, length_side):
    return apothem
 
 def polygon_area(number_sides, length_side):
-   polygon_area = (number_sides*length_side*apothem(number_sides, length_side))/2
+   polygon_area = (number_sides*length_side*apothem(number_sides, length_side))/2  # area of poly wrong --> your output: The area of the polygon is : 155.00941811398295
    return polygon_area
 
 
